@@ -1,46 +1,27 @@
+﻿#Windows Setup
+
+Appium on Windows supports both Windows and Android app automation!
+
+See [Windows App Testing](windows-app-testing.md) for more details.
+
 ## Running Appium on Windows
-
-### Limitations
-
-If you are running Appium on Windows, you can use the
-[Appium.exe](https://github.com/appium/appium-dot-exe) client, which will allow
-you to quickly launch an Appium server and use the Inspector. You will not be
-able to test iOS apps on a locally hosted server, because Appium relies on OS
-X-only libraries to support iOS testing. You can however use the `Remote Server`
-option to connect to an Appium server running on a Mac.
 
 ### Setup
 
 To get started:
 
-1. Install [node.js](http://nodejs.org/download/) (v4 or greater). Use the
-   installer from nodejs.org.
-1. Install `appium-doctor` in order to check your system: `npm install appium-doctor -g`.
-   Then run by typing `appium-doctor`.
-1. Install the [Android SDK](http://developer.android.com/sdk/index.html).
-   You will need to run the 'android' tool (included in the SDK, in the `tools` folder) and make sure
-   you have an API Level 17 or greater API installed. Set `ANDROID_HOME` to be
+   1. Download latest [node and npm tools](https://nodejs.org/download/release/v6.3.0/node-v6.3.0-x64.msi) MSI (version >= 6.0). The `npm` and `nodejs` paths should be in your PATH environment variable. 
+   2. Download latest Java JDK [here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (accept the license agreement first). Set 'JAVA_HOME' to be your JDK path. The `bin` in that directory should be added to your PATH variable.
+   3. Install the [Android SDK](http://developer.android.com/sdk/index.html). Set `ANDROID_HOME` to be
    your Android SDK path and add the `tools` and `platform-tools` folders to your
    PATH variable.
-1. Install the Java JDK and set `JAVA_HOME` to your JDK's `bin` folder.
-1. Install [Apache Ant](http://ant.apache.org/bindownload.cgi) or use the one
-   that comes with the Android Windows SDK in the eclipse\plugins folder. Be
-   sure to add the folder containing Ant to your PATH variable.
-1. Install [Apache Maven](http://maven.apache.org/download.cgi) and set the
-   M2HOME and M2 environment variables. Set `M2HOME` to the directory maven is
-   installed in, and set `M2` to `%M2HOME\bin`. Add the path you used for `M2` to
-   your PATH.
-1. Install [Git](http://git-scm.com/download/win) Be sure to install Git for
-   windows to run in the regular command prompt.
-1. Install [cURL](http://curl.haxx.se/download.html).
-
-Now that you've downloaded everything, if you're running from source, run the
-following in the folder where you cloned appium:
-
-```center
-rm -rf node_modules
-npm install
-```
+   4. Install [Apache Ant](http://ant.apache.org/bindownload.cgi) or use the one that comes with the Android Windows SDK in the eclipse\plugins folder. Be sure to add the folder containing Ant to your PATH variable.
+   5. Install [Apache Maven](http://maven.apache.org/download.cgi) and set the M2HOME and M2 environment variables. Set `M2_HOME` to the directory maven is installed in, and set `M2` to the `bin` in that directory. Add the path you used for `M2` to your PATH.
+   6. Open admin cmd
+   7. Turn on [developer mode](https://msdn.microsoft.com/en-us/windows/uwp/get-started/enable-your-device-for-development)
+   8. npm install -g appium
+   9. appium
+   10. Run a test from any Appium client (including Visual Studio)
 
 ### Running Appium
 
@@ -66,3 +47,29 @@ arguments.
   limitations. For more information you can check out this
   [page](/docs/en/appium-setup/android-hax-emulator.md).
 * Make sure that `hw.battery=yes` in your AVD's `config.ini`.
+
+##Appium + Android Setup for Windows
+
+### Setup
+
+To get started:
+
+   1. Download latest [node and npm tools](https://nodejs.org/download/release/v6.3.0/node-v6.3.0-x64.msi) MSI (version >= 6.0) 
+   2. Download latest Java JDK [here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (accept the license agreement first)
+   3. Install the [Android SDK](http://developer.android.com/sdk/index.html). You will need to run the 'android' tool (included in the SDK, in the  tools  folder) and make sure you have an API Level 17 or greater API installed. Set  ANDROID_HOME  to be your Android SDK path and add the  tools  and  platform-tools  folders to your PATH variable.
+   4. Install the Java JDK and set  JAVA_HOME  to your JDK's  bin  folder.
+   5. Install [Apache Ant](http://ant.apache.org/bindownload.cgi) or use the one that comes with the Android Windows SDK in the eclipse\plugins folder. Be sure to add the folder containing Ant to your PATH variable.
+   6. Install [Apache Maven](http://maven.apache.org/download.cgi) and set the M2HOME and M2 environment variables. Set  M2HOME  to the directory maven is installed in, and set  M2  to  %M2HOME\ bin. Add the path you used for  M2  to your PATH.
+   7. Install [Git](http://git-scm.com/download/win) Be sure to install Git for windows to run in the regular command prompt.
+   8. Install [cURL](http://curl.haxx.se/download.html)
+   9. Install  appium-doctor  in order to check your system: npm install appium-doctor -g. Then run by typing  appium-doctor. You should see that all of the tests have passed
+   10. Within test script, change value of 'platformVersion' to correspond with emulator version (i.e. '4.4.4')
+   11. Within test script, change value of 'app' to PATH('path of .apk') and ensure the entire path (including close parenthesis) is on one line
+
+Notes for tests: 
+- URL endpoint has to append "/wd/hub"
+- DesiredCapabilities:
+   - platformName = "Windows"
+   - deviceName = "WindowsPC"
+
+
