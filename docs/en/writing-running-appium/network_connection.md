@@ -20,6 +20,10 @@ connection API for iOS.
 Choose the setting you would like to use, and then send the correct bitmask from
 the table above.
 
+### Windows
+
+Placeholder
+
 ```javascript
 // javascript
 // set airplane mode

@@ -268,3 +268,7 @@ session. One of the downsides to using Selendroid is that its API differs
 sometimes significantly with Appium's. Therefore we recommend you thoroughly
 read [Selendroid's documentation](http://selendroid.io/native.html) before
 writing your scripts for older devices or hybrid apps.
+
+### Running your test app with Appium (Windows)
+
+* placeholder

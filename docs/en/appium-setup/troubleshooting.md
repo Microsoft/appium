@@ -36,6 +36,10 @@ own items in the SDK manager. Make sure you install the build-tools and platform
   reset the connection to the Android device.
 * Make sure you set ANDROID_HOME pointing to the Android SDK directory
 
+### Windows
+
+* Placeholder
+
 ### IOS
 
 * Make sure Instruments.app is not open
