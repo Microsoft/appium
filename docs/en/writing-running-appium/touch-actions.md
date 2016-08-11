@@ -207,7 +207,3 @@ slider.sendKeys("0.1");
 **Android**
 
 The best way to interact with the slider on Android is with TouchActions.
-
-**Windows**
-
-Placeholder
