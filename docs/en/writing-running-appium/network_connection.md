@@ -22,7 +22,8 @@ the table above.
 
 ### Windows
 
-Placeholder
+Unfortunately, at the moment Appium does not support the Selenium network
+connection API for Windows.
 
 ```javascript
 // javascript
