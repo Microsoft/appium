@@ -40,6 +40,7 @@ own items in the SDK manager. Make sure you install the build-tools and platform
 
 * Make sure developer mode is on
 * Make sure command prompt is Admin
+* Check that the URL Appium server is listening to matches the one specified in test script
 
 ### IOS
 
