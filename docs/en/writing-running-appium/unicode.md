@@ -126,7 +126,3 @@ driver
   .should.eventually.become(testText)
   .nodeify(done);
 ```
-
-#### Windows
-
-Placeholder
