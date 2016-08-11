@@ -38,7 +38,8 @@ own items in the SDK manager. Make sure you install the build-tools and platform
 
 ### Windows
 
-* Placeholder
+* Make sure developer mode is on
+* Make sure command prompt is Admin
 
 ### IOS
 
