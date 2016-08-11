@@ -66,4 +66,4 @@ instructions.
 
 See [running on Windows](running-on-windows.md) for details
 
-* link to [Windows App Testing](windows-app-testing.md)
+* [Windows App Testing](windows-app-testing.md)
