@@ -19,6 +19,10 @@ unpack it for you. Nice if you're not using Appium locally.
 Nothing in particular needs to be done to run your .apk using Appium. If you
 want to zip it up, you can.
 
+### Preparing your app for test (Windows)
+
+Nothing in particular needs to be done to run your test.
+
 ### Running your test app with Appium (iOS)
 
 The best way to see what to do currently is to look at the example tests:
@@ -271,4 +275,8 @@ writing your scripts for older devices or hybrid apps.
 
 ### Running your test app with Appium (Windows)
 
-* placeholder
+Ensure that Appium is listening
+
+Deploy your test from your test runner of choice
+
+See our [samples](https://github.com/Microsoft/WinAppDriver/tree/master/Samples) for details
