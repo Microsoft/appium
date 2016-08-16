@@ -18,35 +18,9 @@ To get started:
    4. Install [Apache Ant](http://ant.apache.org/bindownload.cgi) or use the one that comes with the Android Windows SDK in the eclipse\plugins folder. Be sure to add the folder containing Ant to your PATH variable.
    5. Install [Apache Maven](http://maven.apache.org/download.cgi) and set the M2HOME and M2 environment variables. Set `M2_HOME` to the directory maven is installed in, and set `M2` to the `bin` in that directory. Add the path you used for `M2` to your PATH.
    6. Open admin cmd
-   7. Turn on [developer mode](https://msdn.microsoft.com/en-us/windows/uwp/get-started/enable-your-device-for-development)
-   8. npm install -g appium
-   9. appium
-   10. Run a test from any Appium client (including Visual Studio)
-
-### Running Appium
-
-To run tests on Windows, you will need to have the Android Emulator booted or
-an Android Device connected that is running an AVD with API Level 17 or
-greater. Then run Appium on the command line (via the `appium` command), or if
-you're running from source, inside the folder where you installed appium, using
-node.js:
-
-```center
-node .
-```
-
-See the [server documentation](/docs/en/writing-running-appium/server-args.md) for all the command line
-arguments.
-
-### Notes
-
-* On windows run appium.app as administrator or when running from source you need to run cmd as administrator.
-* You must supply the `--no-reset` or `--full-reset` flags for
-  Android to work on Windows.
-* There exists a hardware accelerated emulator for Android, it has it's own
-  limitations. For more information you can check out this
-  [page](/docs/en/appium-setup/android-hax-emulator.md).
-* Make sure that `hw.battery=yes` in your AVD's `config.ini`.
+   7. run command: npm install -g appium
+   8. run command: appium
+   9. Run a test from any Appium client (including Visual Studio)
 
 ##Appium + Android Setup for Windows
 
@@ -72,4 +46,26 @@ Notes for tests:
    - platformName = "Windows"
    - deviceName = "WindowsPC"
 
+### Running Appium
+
+To run tests on Windows, you will need to have the Android Emulator booted or
+an Android Device connected that is running an AVD with API Level 17 or
+greater. Then run Appium on the command line (via the `appium` command)
+
+See the [server documentation](/docs/en/writing-running-appium/server-args.md) for all the command line
+arguments.
+
+### Notes
+
+* On windows run appium.app as administrator or when running from source you need to run cmd as administrator.
+* You must supply the `--no-reset` or `--full-reset` flags for
+  Android to work on Windows.
+* There exists a hardware accelerated emulator for Android, it has it's own
+  limitations. For more information you can check out this
+  [page](/docs/en/appium-setup/android-hax-emulator.md).
+* Make sure that `hw.battery=yes` in your AVD's `config.ini`.
+
+## Windows App Testing Setup
+
+To test a Windows app, make sure you have turned [developer mode](https://msdn.microsoft.com/en-us/windows/uwp/get-started/enable-your-device-for-development) on.
 
